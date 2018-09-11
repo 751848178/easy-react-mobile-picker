@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
+        "indent": [
+            "error",
+            4
+        ]
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    }
+}

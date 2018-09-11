@@ -1,0 +1,29 @@
+@import "@/assets/styles/base.1.0.scss";
+.picker-bar{
+    @extend .absolute, .flex;
+    bottom: 482px;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    background: #FFF;
+}
+.picker-title{
+    @extend .flex-deuce, .flex-col;
+    height: 88px;
+    line-height: 88px;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+}
+.cancel-btn, .confirm-btn{
+    @extend .fl;
+    width: 120px;
+    height: 88px;
+    line-height: 88px;
+    color: #004DBB;
+    font-size: 30px;
+    text-align: center;
+}
+.confirm-btn{
+    @extend .fr;
+}

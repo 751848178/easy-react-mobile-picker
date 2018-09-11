@@ -1,0 +1,97 @@
+
+/* 全局样式 */
+html, body, div, p, ul, li, h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;}
+
+html, body {
+    height: 100%;
+}
+
+*, *:before, *:after{box-sizing: border-box;}
+
+ul, ol {list-style: none;}
+
+input {
+    &:focus{
+        outline: none;
+    }
+}
+/* End 全局样式 */
+
+/* 功能性样式 */
+.hide {display: none;}
+
+.show {display: block;}
+
+.absolute {position: absolute;}
+
+.relative {position: relative;}
+
+.static {position: static;}
+
+.fixed {position: fixed;}
+
+.fl {float: left;}
+
+.fr {float: right;}
+
+.fn {float: none;}
+
+.size-auto {width: auto;height: auto;}
+
+.fw-no {font-weight: initial;}
+
+.o-hide {overflow: hidden;}
+
+.o-default {overflow: initial;}
+
+.text-l {text-align: left;}
+
+.text-c {text-align: center;}
+
+.text-r {text-align: right;}
+
+.c-white {color: #FFF;}
+
+.c-red {color: #F74F47;}
+
+.inline-block {display: inline-block;}
+
+.block {display: block;}
+
+.inline {display: inline;}
+
+.flex {display: flex;}
+
+.flex-col {flex-flow: column nowrap;}
+
+.flex-deuce {flex-grow: 1;}
+
+.flex-wrap{flex-wrap: wrap;}
+
+.position-mar-c {margin: 0 auto;}
+
+.border-n {border: none;}
+
+.pad-no {padding: 0;}
+
+.mar-no {margin: 0;}
+
+.pointer {cursor: pointer;}
+
+.clearfix:after {content: " ";display: block;clear: both;height: 0;}
+
+.clearfix {zoom: 1;}
+
+.bg-white {background: #FFF;}
+
+.bg-no {background: none;}
+
+.fs-medium{font-weight: 500;}
+
+.fs-bold{font-weight: bold;}
+
+/* .loading-bg{
+    background: url(@/assets/images/loading.gif) no-repeat center;
+} */
+
+/* End 功能性样式 */

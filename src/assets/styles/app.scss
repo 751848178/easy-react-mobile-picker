@@ -1,0 +1,30 @@
+:global {
+    .tcjk-dialog {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999999;
+        &.show {
+            display: block;
+        }
+    }
+    .disable-btn {
+        color: gray;
+        pointer-events: none;
+    }
+    .loading {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(/assets/images/ajax_loading.gif) no-repeat center;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 9999999999999;
+    }
+}

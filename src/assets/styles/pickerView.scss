@@ -1,0 +1,12 @@
+@import "@/assets/styles/base.1.0.scss";
+.picker-view{
+    @extend .flex, .o-hide, .absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 200px;
+    width: 100%;
+    height: 482px;
+    background: #FFF;
+    transform: translate3d(0px, 0px, 0px);
+    z-index: 1;
+}
