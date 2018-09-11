@@ -2,14 +2,14 @@
 .picker-column{
     @extend .flex-col, .flex-deuce;
     overflow: visible;
-    height: 280px;
+    height: 100%;
     background: #FFF;
     &::before{
         @extend .absolute;
         content: " ";
         left: 0;
         bottom: 0;
-        height: 482px;
+        height: 171.2%;
         margin: 0 auto;
         width: 100%;
         z-index: 3;
@@ -26,12 +26,12 @@
         border-top: 1px solid #E6E6E6;
         border-bottom: 1px solid #E6E6E6;
         width: 100%;
-        height: 70px;
+        height: 25%;
     }
 }
 .picker-item{
-    height: 70px;
-    line-height: 70px;
+    height: 25%;
+    line-height: 196%;
     text-align: center;
     font-size: 24px;
     &.active{
