@@ -12,7 +12,7 @@
 
 ## 代码仓库
 
-[easy-react-mobile-picker](https://www.npmjs.com/package/easy-react-mobile-picker "类似IOS样式的Picker组件")
+[easy-react-mobile-picker](https://github.com/751848178/easy-react-mobile-picker "类似IOS样式的Picker组件")
 
 ## 使用
 
