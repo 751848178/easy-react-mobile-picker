@@ -1,16 +1,12 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
 import PickerView from "./PickerView";
 import CascaderPicker from "./CascaderPicker";
 import PickerBar from "./PickerBar";
 
-import CSSModules from "react-css-modules";
-import styles from "@/assets/styles/picker.scss";
+import "../assets/styles/picker.scss";
 
-@CSSModules(styles, {
-    allowMultiple: true
-})
-export default class Picker extends Component {
+export default class Picker extends PureComponent {
 
     state = {
         value: [],

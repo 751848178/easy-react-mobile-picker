@@ -1,14 +1,10 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
 import PickerColumn from "./PickerColumn";
 
-import CSSModules from "react-css-modules";
-import styles from "@/assets/styles/pickerView.scss";
+import "../assets/styles/pickerView.scss";
 
-@CSSModules(styles, {
-    allowMultiple: true
-})
-export default class PickerView extends Component {
+export default class PickerView extends PureComponent {
 
     state = {
         // dummy slides data

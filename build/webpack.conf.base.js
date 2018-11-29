@@ -1,13 +1,15 @@
 const path = require("path");
-const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const generateScopedName = require("./util");
 const OptimizeCSSPlugin = require("optimize-css-assets-webpack-plugin");
 
 const resolveApp = dir => path.join(__dirname, "..", dir);
-const resolvePage = dir => path.join(__dirname, "../src/page", dir);
 
 module.exports = {
     stats: "normal",
+    externals: {
+        // "react": "window.React",
+        // "react-dom": "window.ReactDOM"
+    },
     resolve: {
         alias: {
             "@": resolveApp("src"),
@@ -19,6 +21,7 @@ module.exports = {
         rules: [{
             test: /\.(js|jsx|mjs)$/,
             exclude: /(node_modules)\/(?!(dom7|swiper)\/).*/,
+            // include: /(node_modules)\/(?!(dom7|swiper)\/).*/,
             use: [
                 {
                     loader: "babel-loader",
@@ -31,7 +34,16 @@ module.exports = {
             test: /\.(css|scss|sass)$/,
             use: [
                 "style-loader",
-                "css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]",
+                {
+                    loader: "css-loader",
+                    options: {
+                        minimize: true, //css压缩
+                        modules: true,
+                        getLocalIdent({resourcePath}, localIdentName, localName) {
+                            return generateScopedName(localName, resourcePath);
+                        }
+                    }
+                },
                 "px2rem-loader?remUnit=75&remPrecision=3",
                 "sass-loader",
             ],
@@ -48,9 +60,4 @@ module.exports = {
             }],
         }]
     },
-    plugins: [
-
-        //压缩提取出的css，并解决ExtractTextPlugin分离出的js重复问题(多个文件引入同一css文件)
-        new OptimizeCSSPlugin(),
-    ]
 };

@@ -1,12 +1,8 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
-import CSSModules from "react-css-modules";
-import styles from "@/assets/styles/pickerBar.scss";
+import "../assets/styles/pickerBar.scss";
 
-@CSSModules(styles, {
-    allowMultiple: true
-})
-export default class PickerBar extends Component {
+export default class PickerBar extends PureComponent {
 
     confirm = e => {
         e.stopPropagation();

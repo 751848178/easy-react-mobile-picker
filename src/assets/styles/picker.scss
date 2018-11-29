@@ -1,6 +1,55 @@
-@import "@/assets/styles/base.1.0.scss";
+:global{
+    .swiper-container {
+        margin: 0 auto;
+        position: relative;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
+    .swiper-container-vertical>.swiper-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform,-webkit-transform;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    .swiper-slide {
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform,-webkit-transform;
+    }
+}
 .picker{
-    @extend .fixed;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -10,9 +59,12 @@
     &.hide{
         display: none;
     }
+    *{
+        box-sizing: border-box;
+    }
 }
 .mask{
-    @extend .absolute;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;

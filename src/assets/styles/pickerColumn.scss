@@ -1,11 +1,11 @@
-@import "@/assets/styles/base.1.0.scss";
 .picker-column{
-    @extend .flex-col, .flex-deuce;
+    flex-flow: column nowrap;
+    flex-grow: 1;
     overflow: visible;
     height: 100%;
     background: #FFF;
     &::before{
-        @extend .absolute;
+        position: absolute;
         content: " ";
         left: 0;
         bottom: 0;
@@ -19,7 +19,7 @@
         background-size: 100% 200px;
     }
     &:after{
-        @extend .absolute;
+        position: absolute;
         content: " ";
         top: 0;
         left: 0;

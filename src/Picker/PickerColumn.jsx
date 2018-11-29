@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 
-import CSSModules from "react-css-modules";
-import styles from "@/assets/styles/pickerColumn.scss";
-import Swiper from "swiper/dist/js/swiper.esm.bundle";
+import "../assets/styles/pickerColumn.scss";
+import { Swiper } from "swiper/dist/js/swiper.esm";
+// import Swiper from "swiper/src/components/core/core-class.js";
 
 import { getCurrZoomPx } from "@/utils/style.util";
 
-@CSSModules(styles, {
-    allowMultiple: true
-})
-export default class PickerColumn extends Component {
+
+export default class PickerColumn extends PureComponent {
 
     constructor(props) {
         super();
